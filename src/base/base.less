@@ -16,6 +16,30 @@ body {
 div {
   box-sizing: border-box;
 }
+div.image_computer {
+  border-radius: var(--radius-m);
+  background-color: var(--base-01);
+  height: 360px;
+}
+div.list_elem {
+  display: inline;
+  grid-template-columns: 316px;
+  display: inline-block;
+}
+div.list_elem::before {
+  content: "";
+  height: 2px;
+  width: 12px;
+  border-radius: 1px;
+  background-color: var(--text-01);
+  position: absolute;
+  //bottom:52px;
+  display: inline;
+  //margin-bottom: 20px;
+}
+p.list_elem {
+ margin-left: 14px;
+}
 
 ul,
 ol {
