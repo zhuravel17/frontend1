@@ -1,20 +1,48 @@
 .title {
-  .text-h2();
+  font-family: Roboto;
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 48px;
+  letter-spacing: 0px;
+  text-align: center;
   display: flex;
   justify-content: center;
   margin-bottom: 76px;
-  margin-top: 76px;
+  margin-top: 24px;
 }
-
 .title_first {
-  .text-h1();
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 912px;
+  height: 48px;
   margin-top: 80px;
-  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 48px;
+  margin-bottom: 0px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 48px;
+  /* identical to box height, or 109% */
 
+  text-align: center;
+  font-feature-settings: 'liga' off;
+
+  /* Day/Text/text-01 */
+
+  color: rgba(0, 0, 0, 0.8);
+
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
 }
+
+
 
 
 
@@ -22,13 +50,17 @@
   display: flex;
   flex-flow: column nowrap;
   height: 100%;
+  margin-top: 15px;
   padding: 32px;
   border-radius: var(--radius-s);
   background-color: var(--base-01);
 
   &__title {
-    .text-h4();
+    font: var(--font-h4);
+    color: var(--text-01);
     align-self: flex-start;
+    margin-top: 28px;
+    margin-bottom: 28px;
   }
 
   &__info {
@@ -49,50 +81,37 @@
   }
 }
 
-.rectangle {
+.elem {
+  display: grid;
+  grid-template-columns: 316px;
+}
+
+.elem::before {
+  content: "";
   height: 2px;
   width: 12px;
   border-radius: 1px;
   margin-right: 8px;
   background-color: var(--text-01);
+  position: absolute;
+}
+
+.list {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  list-style-position: outside;
+  margin-top: 50px;
+  max-width: 380px;
+  padding-left: 70px;
 }
 
 .list_elem {
   display: grid;
   grid-template-columns: 316px;
-}
-
-.block_sq {
-  height: 56px;
-  width: 56px;
-  border-radius: 31.25%;
-  background-color: #000000;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  top: 26px;
-}
-
-.block_sum {
-  display: flex;
-  flex-flow: column nowrap;
-  box-shadow: 5px 8px black;
-  height: 50%;
-  padding: 32px;
-  border-radius: var(--radius-s);
-  background-color: var(--base-01);
-
-  &__title {
-    .text-h4();
-    align-self: flex-start;
-  }
-
-  &__info {
-    .text-basic();
-    margin: 0;
-  }
+  margin-bottom: 10px;
+  list-style: none;
 }
 
 *:has(.block) {
